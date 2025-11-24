@@ -1,0 +1,19 @@
+.TH _PRINTF 3 "November 2025" "" "Holberton School - _printf"
+
+.SH NAME
+_printf - formatted output conversion
+
+.SH SYNOPSIS
+.B #include "holberton_h"
+
+.B int _printf(const char *\fIformat\fB, ...);
+
+.SH DESCRIPTION
+The function \fB_printf\fR writes output to \fIstdout\fR, the standart output.
+
+.SH RETURN VALUE
+
+.SH EXEMPLES
+
+.SH AUTHORS
+Anthony Goutieras and Anil Aker
