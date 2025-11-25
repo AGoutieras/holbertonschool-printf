@@ -46,22 +46,12 @@ Usage Examples
 int main(void)
 {
     _printf("Hello, %s! You are %d years old.\n", "Alexis", 42);
-    _printf("Hex: %x, HEX: %X\n", 255, 255);
-    _printf("Pointer: %p\n", (void*)0x7fff5fbff8ac);
-    _printf("Reversed: %r\n", "Hello");
-    _printf("Rot13: %R\n", "Hello World");
-    _printf("%+d, % d, %#x\n", 42, -42, 255);
     return (0);
 }
 ```
 ```
 Output:
 Hello, Alexis! You are 42 years old.
-Hex: ff, HEX: FF
-Pointer: 0x7fff5fbff8ac
-Reversed: olleH
-Rot13: Uryyb Jbeyq
-+42, -42, 0xff
 ```
 
 #### Testing
@@ -74,7 +64,7 @@ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c tests/*.c -o test
 ```
 #### Memory leak checking with Valgrind
 ```
-Bashvalgrind --leak-check=full --show-leak-kinds=all ./test_printf
+valgrind --leak-check=full --show-leak-kinds=all ./test_printf
 ```
 All tests pass with no memory leaks and no errors on Valgrind.
 
