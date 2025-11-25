@@ -87,4 +87,4 @@ main.h - Header file with prototypes and struct definitions
 
 ### Authors
 
-#### Alexis Goutieras  & Anil Aker
+#### Anthony Goutieras  & Anil Aker
