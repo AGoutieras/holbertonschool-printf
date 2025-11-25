@@ -1,15 +1,17 @@
 #include "holberton.h"
 
 /**
- * _printf - 
+ * _printf - writes output to stdout
+ * @format: character string
+ * Return: number of characters printed
  */
 
 int _printf(const char *format, ...)
 {
 	va_list args;
+	int i = 0, count = 0;
 
 	va_start(args, format);
-	int i = 0, count = 0;
 
 	if (format == NULL)
 		return (-1);
@@ -21,9 +23,8 @@ int _printf(const char *format, ...)
 			i++;
 			if (format[i] == '\0')
 				return (-1);
-				
-			if (format[i] == 'c')
 
+			if (format[i] == 'c')
 				count = count + print_char(va_arg(args, int));
 			else if (format[i] == 's')
 				count = count + print_string(va_arg(args, char *));
@@ -31,23 +32,18 @@ int _printf(const char *format, ...)
 				count = count + print_number(va_arg(args, int));
 			else if (format[i] == '%')
 			{
-				_putchar('%');
+				print_char('%');
 				count++;
 			}
 			else
-			{
 				return (-1);
-			}
 			i++;
 		}
 		else
-		{
-			_putchar(format[i]);
-			count++;
+		{	count = count + print_char(format[i]);
 			i++;
 		}
 	}
 	va_end(args);
 	return (count);
-
 }
