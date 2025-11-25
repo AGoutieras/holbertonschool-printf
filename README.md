@@ -1,4 +1,6 @@
-# holbertonschool-printf
+![C](https://img.shields.io/badge/language-C-blue.svg)
+![Holberton](https://img.shields.io/badge/school-Holberton-red.svg)
+
 ## _printf - Custom implementation of printf function
 
 **Project realized by :**  
