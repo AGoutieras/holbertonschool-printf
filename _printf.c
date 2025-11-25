@@ -10,9 +10,7 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 
-	va_start(args, format);
-
-	int count = 0, index = 0, spec_index = 0;
+	int count = 0, index, spec_index;
 
 	specifier_t specs[] = {
 		{'c', print_char},
@@ -22,6 +20,8 @@ int _printf(const char *format, ...)
 		{'i', print_int},
 		{'\0', NULL}
 	};
+
+	va_start(args, format);
 
 	for (index = 0; format[index]; index++)
 	{
