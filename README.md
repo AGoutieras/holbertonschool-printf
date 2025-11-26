@@ -85,7 +85,7 @@ man_3_printf - Custom man page
 main.h - Header file with prototypes and struct definitions
 
 #### Flowchart
-![Flowchart of the _printf function]([https://myoctocat.com/assets/images/base-octocat.svg](https://i.imgur.com/8pIBjPr.png))
+![Flowchart of the _printf function]([https://i.imgur.com/8pIBjPr.png])
 
 ### Authors
 
