@@ -28,4 +28,7 @@ int print_percent(void);
 /* function to print integers */
 int print_int(va_list args);
 
+/* function to print numbers */
+int print_number(int n);
+
 #endif
