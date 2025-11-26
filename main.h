@@ -4,6 +4,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
 
 typedef struct specifier
 {
@@ -26,5 +27,8 @@ int print_percent(va_list args);
 
 /* function to print integers */
 int print_int(va_list args);
+
+/* function to print numbers */
+int print_number(int n);
 
 #endif
