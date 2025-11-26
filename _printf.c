@@ -20,10 +20,11 @@ int _printf(const char *format, ...)
 		{'i', print_int},
 		{'\0', NULL}
 	};
+	if (format == NULL)
+		return (-1);
 
 	va_start(args, format);
-
-	for (index = 0; format[index]; index++)
+	for (index = 0; format[index] != '\0'; index++)
 	{
 		if (format[index] == '%')
 		{
@@ -45,7 +46,6 @@ int _printf(const char *format, ...)
 		else
 			count = count + write(1, &format[index], 1);
 	}
-
 	va_end(args);
 	return (count);
 }
