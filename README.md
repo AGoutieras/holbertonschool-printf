@@ -80,10 +80,12 @@ text==12345== HEAP SUMMARY:
 File Structure
 
 _printf.c - Main function and dispatcher
-print_* files - Handlers for each conversion specifier
-utils.c / helpers.c - Helper functions (write char, string length, etc.)
+printf_helpers.c - Helper functions
 man_3_printf - Custom man page
 main.h - Header file with prototypes and struct definitions
+
+#### Flowchart
+![Flowchart of the _printf function]([https://myoctocat.com/assets/images/base-octocat.svg](https://i.imgur.com/8pIBjPr.png))
 
 ### Authors
 
