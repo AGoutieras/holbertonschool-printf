@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 			index++;
 			if (format[index] == '\0')
 			{
-				count = count + write(1, "%", 1);
+				count = -1;
 				break;
 			}
 			for (spec_index = 0; specs[spec_index].symbol; spec_index++)
