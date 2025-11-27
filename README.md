@@ -24,7 +24,7 @@ Supported conversion specifiers in this version:
 
 ### Compilation
 
-The code is tested and compiled on **Ubuntu 22.04 LTS** using:
+The code is tested and compiled on **Ubuntu 20.04 LTS** using:
 
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _printf.c
