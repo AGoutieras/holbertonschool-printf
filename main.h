@@ -8,8 +8,8 @@
 
 typedef struct specifier
 {
-    char symbol;
-    int (*func)(va_list);
+	char symbol;
+	int (*func)(va_list);
 } specifier_t;
 
 
