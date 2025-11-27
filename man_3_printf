@@ -1,19 +1,59 @@
-.TH _PRINTF 3 "November 2025" "" "Holberton School - _printf"
+.TH _PRINTF 3 "November 2025" "Holberton School" "_printf Manual"
 
 .SH NAME
-_printf - formatted output conversion
+_printf \- formatted output conversion
 
 .SH SYNOPSIS
-.B #include "holberton_h"
+.B #include "main.h"
 
 .B int _printf(const char *\fIformat\fB, ...);
 
 .SH DESCRIPTION
-The function \fB_printf\fR writes output to \fIstdout\fR, the standart output.
+The \fB_printf\fR function produces output according to the given \fIformat\fR.
+It writes the formatted output to \fIstdout\fR, the standard output.
+
+The function handles the following conversion specifiers:
+
+.TP
+.B %c
+Prints a single character.
+
+.TP
+.B %s
+Prints a string of characters.
+
+.TP
+.B %%
+Prints a percent sign.
+
+.TP
+.B %d, %i
+Prints a signed decimal integer.
+
+Unsupported specifiers are printed back verbatim as "%<character>".
 
 .SH RETURN VALUE
+Upon successful return, the number of characters printed is returned.
+If an error occurs, the function returns \-1.
 
-.SH EXEMPLES
+.SH EXAMPLES
+Print a string:
+
+.EX
+_printf("Hello %s!", "world");
+.EE
+
+Print numbers:
+
+.EX
+_printf("Value: %d", 42);
+.EE
+
+Print a percent sign:
+
+.EX
+_printf("Discount: 100%%");
+.EE
 
 .SH AUTHORS
 Anthony Goutieras and Anil Aker
